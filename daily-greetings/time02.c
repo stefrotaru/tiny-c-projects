@@ -3,8 +3,7 @@
 
 int main() {
     time_t now;
-    struct tm *clock;
-    // because localtime() returns a pointer, it's best to declare the structure as a pointer
+    struct tm *clock; // 1
 
     time(&now);
     clock = localtime(&now);
@@ -20,4 +19,5 @@ int main() {
     return 0;
 }
 
+// 1. Because localtime() returns a pointer, it's best to declare the structure as a pointer.
 // doc: https://devdocs.io/c/chrono/tm 

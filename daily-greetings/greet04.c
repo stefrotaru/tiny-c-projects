@@ -4,10 +4,10 @@
 int main(int argc, char *argv[]) {
     time_t now;
     struct tm *clock;
-    char time_string[64]; // storage for the string filled by the strftime() function
+    char time_string[64]; // 1 
 
     time(&now);
-    clock = localtime(&now); // you must fill a localtime() tm structure to make the strftime() function work
+    clock = localtime(&now); // 2
 
     strftime(time_string, sizeof(time_string), "Today is %A, %B %d, %Y\nIt is %H:%M:%S\n", clock);
     // %A writes full day name, e.g. Monday (locale dependent)
@@ -26,4 +26,6 @@ int main(int argc, char *argv[]) {
     return 0;   
 }
 
+// 1. Storage for the string filled by the strftime() function
+// 2. You must fill a localtime() tm structure to make the strftime() function work
 // doc: https://devdocs.io/c/chrono/strftime

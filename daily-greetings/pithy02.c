@@ -41,6 +41,6 @@ int main() {
 // pithy01.c with memory allocation added
 
 // 1. Required for the strcpy() and strlen() functions
-// 2. Within the while loop, memory is allocated for variable entry. The pointer must be tesetd to ensure memory is available. Then the conetnts of buffer[] are copied to entry, the contents of entry output, andthe items variable incremented.
+// 2. Within the while loop, memory is allocated for variable entry. The pointer must be tested to ensure memory is available. Then the contents of buffer[] are copied to entry, the contents of entry output, and the items variable incremented.
 // 3. Enough storage for the strin, plus one for the null character
 // 4. The contents of buffer are copied to entry

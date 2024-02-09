@@ -6,15 +6,14 @@ int main(int argc, char *argv[]) {
     struct tm *clock;
     int hour;
 
-    time (&now);
+    time(&now);
     clock = localtime(&now);
-    hour = clock->tm_hour; // tm_hour ranges from 0 to 23
+    hour = clock->tm_hour; // 1
 
-    if ( hour > 0 && hour < 6) { // 1 to 5am
+    if ( hour > 0 && hour < 6) {
         printf("Are you still up? ");
 
         if ( argc > 1 ) {
-            // if there's an argument, I hope it's a name
             printf("Go to sleep, %s!", argv[1]);
         }
 
@@ -22,15 +21,14 @@ int main(int argc, char *argv[]) {
     }
 
     printf("Good ");
-    if ( hour < 12 )
+    if ( hour < 12 )        // 2
         printf("morning");
-    else if ( hour < 17)
+    else if ( hour < 17)    // 3
         printf("afternoon");
-    else 
+    else                    // 4
         printf("evening");
     
-    if ( argc > 1 ) {
-        // again, if there's an argument, I hope it's a name
+    if ( argc > 1 ) {      // 5
         printf(", %s!", argv[1]);
     }
 
@@ -38,3 +36,9 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+// 1. This statement is a convenience to avoid using clock->tm_hour over and over.
+// 2. Before noon, say "Good morning".
+// 3. From noon to 5 PM, say "Good afternoon".
+// 4. Otherwise, it's evening.
+// 5. Check for and output the first command-line argument if it exists.

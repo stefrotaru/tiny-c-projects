@@ -60,7 +60,5 @@ int main() {
 }
 
 // Improving pithy04.c for our usecase, which is to output a random line from the file pithy.txt
-// The program doesn't release any memory directly. Normally, the end of a function would be dotted wtih free() statements, one for each memory chunk allocated. Because the entire code dwells within the main() function, freeing memory isn't necessary. The memory allocated is freed wen the program quits.
+// The program doesn't release any memory directly. Normally, the end of a function would be dotted wtih free() statements, one for each memory chunk allocated. Because the entire code dwells within the main() function, freeing memory isn't necessary. The memory allocated is freed when the program quits.
 // Had the allocation taken place in a function, however, it's necessary to release the allocation or risk losing the memory chunk and potentially cause a memory overflow.
-
-// TODO: Incorporate the pithy05.c code into the daily-greetings project

@@ -28,7 +28,7 @@ int main() {
 }
 
 // 1. The file is assumed to be in the same directory as the program
-// 2. The buffer is used to read text from the file, the sze is a guess defined just before main()
+// 2. The buffer is used to read text from the file, the size is a guess defined just before main()
 // 3. open the file for reading
 // 4. loops as long as the file isn't empty
 // 5. the variable r ensures that fgets() doesn't mess up and read beyond the end of the file; if so, the loop stops
