@@ -18,8 +18,8 @@ char isterm(char *term) {
         t = term; // 2
         while ( *n != '\0' ) { // 3
             if ( (*n|0x20) != (*t|0x20)) // 4
-                break;
-            n++; // 5
+                break; // 5
+            n++;
             t++; // 6
         }
 
