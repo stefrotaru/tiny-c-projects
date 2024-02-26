@@ -25,12 +25,12 @@ int main() {
         }
         else
             putchar(ch);
-
     }
+    
     return 0;
 }
 
-// 1. Modified to add lowecase
+// 1. Modified to add lowercase
 // 2. Checks for the % sign and grabs the next two characters
 // 3. Bails on EOF
 // 4. Converts the hex digit into a integer
